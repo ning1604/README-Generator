@@ -30,7 +30,7 @@ ${data.description}
 - [Usage](#usage)
 - [License](#license)
 - [Contributing](#contributing)
-- [Test](#test)
+- [Tests](#tests)
 - [Questions](#questions)
 
 ## Installation
@@ -49,7 +49,7 @@ ${data.contributing}
 ${data.test}
 
 ## Questions
-For further questions about the repository, open an issue or contact me directly at [${data.email}](mailto:${data.email}). You can find more of my work at [${data.username}](https://github.com/${data.username}?tab=repositories)
+For further questions about the repository, open an issue or contact me directly at [${data.email}](mailto:${data.email}). You can find more of my work at [${data.username}](https://github.com/${data.username}?tab=repositories).
 `;
 }
 
