@@ -1,19 +1,27 @@
-// TODO: Create a function that returns a license badge based on which license is passed in
-// If there is no license, return an empty string
-function renderLicenseBadge(license) {}
+// Function to render license badge
+function renderLicenseBadge(data) {
+  if (data.licenseChoice === "Unlicense") {
+    return licenseBadge = "";
+  } else {
+    return licenseBadge = `![License: ${data.licenseChoice}](https://img.shields.io/badge/License-${data.licenseChoice}-green)`;
+  }
+};
 
-// TODO: Create a function that returns the license link
-// If there is no license, return an empty string
-function renderLicenseLink(license) {}
+// Function to render information in license section
+function renderLicenseSection(data) {
+  if (data.licenseChoice === 'Unlicense') {
+    return license = "There is no license in use for this project";
+  } else {
+    return license = `This project is licensed under the ${data.licenseChoice} license.`;
+  }
+};
 
-// TODO: Create a function that returns the license section of README
-// If there is no license, return an empty string
-function renderLicenseSection(license) {}
-
-// TODO: Create a function to generate markdown for README
+// Function to generate markdown for README
 function generateMarkdown(data) {
-  return `# ${data.projectTitle}
-![License: ${data.licenseChoice}](https://img.shields.io/badge/License-${data.licenseChoice}-green)
+  renderLicenseBadge(data)
+  renderLicenseSection(data)
+  return `# ${data.title}
+${licenseBadge}
 ## Description
 ${data.description}
 
@@ -32,12 +40,12 @@ ${data.installation}
 ${data.usage}
 
 ## License
-${data.licenseChoice}
+${license}
 
 ## Contributing
 ${data.contributing}
 
-## Test
+## Tests
 ${data.test}
 
 ## Questions
